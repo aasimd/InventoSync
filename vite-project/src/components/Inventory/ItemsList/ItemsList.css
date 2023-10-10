@@ -1,0 +1,10 @@
+/** @format */
+
+.inventory-items-list ul {
+    justify-content: center;
+    align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin: auto;
+}
