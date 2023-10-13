@@ -19,7 +19,7 @@ export const ItemsList = () => {
 				</ul>
 			) : (
 				<div>
-					<h1>No Items in Inventory, Add new Items to Displayed her.</h1>
+					<h1>No Items in Inventory, Add new Items to be Displayed her.</h1>
 				</div>
 			)}
 		</div>

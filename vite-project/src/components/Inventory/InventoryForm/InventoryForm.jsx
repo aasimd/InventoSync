@@ -29,6 +29,7 @@ export const InventoryForm = () => {
 				<label htmlFor="Item-name">
 					Name:{" "}
 					<input
+						required
 						type="text"
 						value={newItem?.name}
 						onChange={(event) =>
@@ -41,6 +42,7 @@ export const InventoryForm = () => {
 				<label htmlFor="Item-quantity">
 					Quantity:{" "}
 					<input
+						required
 						type="number"
 						value={newItem?.quantity}
 						onChange={(event) =>
@@ -53,6 +55,7 @@ export const InventoryForm = () => {
 				<label htmlFor="Item-price">
 					Price:{" "}
 					<input
+						required
 						type="number"
 						value={newItem?.price}
 						onChange={(event) =>
@@ -65,6 +68,7 @@ export const InventoryForm = () => {
 				<label htmlFor="Item-category">
 					Category:{" "}
 					<input
+						required
 						type="text"
 						value={newItem?.category}
 						onChange={(event) =>
