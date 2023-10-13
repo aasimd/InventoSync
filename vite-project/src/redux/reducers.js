@@ -5,6 +5,10 @@ const initialState = {
 	sales: [],
 	editItemId: "",
 	showItemEditModal: false,
+	showItemDeleteModal: false,
+	deleteItemId: "",
+	newSaleId: "",
+	showAddNewSaleModal:false,
 	isLoading: false,
 	error: null
 };
@@ -28,9 +32,6 @@ export const mainReducer = (state = initialState, action) => {
 		case "deleteItem":
 			const filteredItems = state.items.filter((item) => item._id !== payload);
 			return { ...state, items: filteredItems };
-		case "addSale":
-			const newSales = [...state.sales, payload];
-			return { ...state, sales: newSales };
 		case "setEditItemId":
 			return { ...state, editItemId: payload };
 		case "setShowItemEditModal":
@@ -40,6 +41,11 @@ export const mainReducer = (state = initialState, action) => {
 				item._id === payload.id ? payload.item : item
 			);
 			return { ...state, items: updatedItems };
+		case "getSales":
+			return { ...state, sales: payload };
+		case "addSale":
+			const newSales = [...state.sales, payload];
+			return { ...state, sales: newSales };
 		default:
 			return state;
 	}

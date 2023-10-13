@@ -76,3 +76,35 @@ export const deleteItem = (id) => async (dispatch) => {
 	}
 	dispatch({ type: SET_LOADING, payload: false });
 };
+
+export const fetchSales = () => async (dispatch) => {
+	dispatch({ type: SET_LOADING, payload: true });
+
+	try {
+		const response = await axios.get(
+			"https://inventory-management.aasimd.repl.co/sales"
+		);
+		dispatch({ type: GET_SALES, payload: response.data.data });
+		console.log("Sales Data fetched Successfully:", response.data.data);
+	} catch (error) {
+		console.error("Error Occurred While fetching Sales Data.", error);
+	}
+	dispatch({ type: SET_LOADING, payload: false });
+};
+
+export const addSale = (sale) => async (dispatch) => {
+	const requestBody = sale;
+	dispatch({ type: SET_LOADING, payload: true });
+	try {
+		const addedSale = await axios.post(
+			"https://inventory-management.aasimd.repl.co/sales",
+			requestBody
+		);
+		dispatch({ type: ADD_SALE, payload: addedSale.data.data });
+		console.log("Sale Added");
+	} catch (e) {
+		console.error("Error Occurred While Adding Sale to Database.", e);
+	}
+	dispatch({ type: SET_LOADING, payload: false });
+};
+

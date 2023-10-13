@@ -44,9 +44,7 @@ export const ItemCard = ({ item }) => {
 					InStock: <b>{quantity}</b> pcs
 				</div>
 				<div>
-					<b>
-						{price}$ / piece
-					</b>
+					<b>{price}$ </b>/pc
 				</div>
 			</div>
 		</div>
