@@ -8,10 +8,9 @@ export const TotalRevenueAndItemsCard = () => {
 	const { startDate, endDate } = useSelector((state) => state.dateFilters);
 	const sales = useSelector((state) => state.sales);
 	const filteredSales = filterByDates(startDate, endDate, sales);
-	const totalRevenue = filteredSales.reduce(
-		(acc, curr) => acc + curr.totalPrice,
-		0
-	);
+	const totalRevenue = filteredSales
+		.reduce((acc, curr) => acc + curr.totalPrice, 0)
+		.toFixed(2);
 	const totalItemsSold = filteredSales.reduce(
 		(acc, curr) => acc + curr.amount,
 		0

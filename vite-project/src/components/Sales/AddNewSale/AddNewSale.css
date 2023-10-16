@@ -1,7 +1,9 @@
 /** @format */
 
 .item-card-in-add-new-sale {
-	border: 1px solid black;
+	border: 2px solid #555;
+	color: #555;
+	font-weight: 600;
 	width: 150px;
 	border-radius: 10px;
 	padding: 10px;
@@ -10,7 +12,8 @@
 .item-card-in-add-new-sale:hover {
 	font-weight: 700;
 	cursor: pointer;
-	border: 3px solid;
+	border: 2px solid black;
+	color: black;
 }
 
 .items-list-in-add-new-sale ul {

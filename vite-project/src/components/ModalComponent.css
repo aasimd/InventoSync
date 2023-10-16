@@ -1,0 +1,39 @@
+/** @format */
+
+.Modal-component {
+    border: 2px solid #555;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+	top: 0;
+	bottom: 0;
+	position: fixed;
+	margin: auto;
+	width: fit-content;
+	left: 0;
+	right: 0;
+	background-color: white;
+	padding: 2rem;
+	z-index: 10;
+	border-radius: 20px;
+}
+.background-dark-and-blur {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+    background-color: #999999;
+}
+/* }.add-new-sale-modal {
+	display: flex; */
+/* left: 0;
+	right: 0;
+	inset: 0;
+	margin: auto;
+	position: fixed;
+	height: 80vh;
+	top: 0;
+	bottom: 0;
+} */

@@ -7,26 +7,42 @@ import { SalesHistoryTable } from "../../components/Sales/SalesHistoryTable/Sale
 import { AddNewSale } from "../../components/Sales/AddNewSale/AddNewSale";
 import { FilterSalesCard } from "../../components/Sales/FilterSalesCard/FilterSalesCard";
 import "./Sales.css";
-import { filterByDates } from "../../utils/functions";
 import { TotalRevenueAndItemsCard } from "../../components/TotalRevenueAndItemsCard/TotalRevenueAndItemsCard";
+import { AddNewSaleModal } from "../../components/Sales/AddNewSaleModal/AddNewSaleModal";
 
 export const Sales = () => {
 	const dispatch = useDispatch();
+	const showAddNewSaleModal = useSelector((state) => state.showAddNewSaleModal);
 	useEffect(() => {
 		dispatch(fetchItems());
 		dispatch(fetchSales());
 	}, [dispatch]);
 	return (
-		<div className="sales-page">
-			<h1>Sales</h1>
-			<div className="sales-page-layout">
-				<div className="sales-page-section-1">
-					<TotalRevenueAndItemsCard />
-					<AddNewSale />
+		<div>
+			{showAddNewSaleModal && (
+				<div>
+					<AddNewSaleModal />
 				</div>
-				<div className="sales-page-section-2">
-					<FilterSalesCard />
-					<SalesHistoryTable />
+			)}
+			<div
+				onClick={() => {
+					showAddNewSaleModal &&
+						dispatch({ type: "setShowAddNewSaleModal", payload: false });
+				}}
+				className={`sales-page ${
+					showAddNewSaleModal && "background-dark-and-blur"
+				}`}
+			>
+				<h1>Sales</h1>
+				<div className="sales-page-layout">
+					<div className="sales-page-section-1">
+						<TotalRevenueAndItemsCard />
+						<AddNewSale />
+					</div>
+					<div className="sales-page-section-2">
+						<FilterSalesCard />
+						<SalesHistoryTable />
+					</div>
 				</div>
 			</div>
 		</div>

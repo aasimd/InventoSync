@@ -1,0 +1,28 @@
+/** @format */
+
+.items-list-in-add-new-sale {
+	color: teal;
+	border: 2px solid;
+    border-radius: 10px;
+	padding: 20px;
+	background-color: white;
+	width: 30vw;
+	margin: 20px auto;
+	line-height: 30px;
+    font-size: 1.1rem;
+}
+.items-list-in-add-new-sale ul {
+	justify-content: center;
+	align-items: center;
+}
+.items-list-in-add-new-sale input[type="search"] {
+	color: teal;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 5px 10px;
+	border-radius: 5px;
+    margin: 10px 0;
+}
+.items-list-in-add-new-sale input[type="search"]::placeholder{
+    color: rgb(202, 202, 202);
+}

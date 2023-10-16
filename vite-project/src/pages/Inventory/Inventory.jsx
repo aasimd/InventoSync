@@ -7,6 +7,7 @@ import { ItemsList } from "../../components/Inventory/ItemsList/ItemsList";
 import { InventoryForm } from "../../components/Inventory/InventoryForm/InventoryForm.jsx";
 import { ItemEditModal } from "../../components/Inventory/ItemEditModal/ItemEditModal";
 import { ItemDeleteModal } from "../../components/Inventory/ItemDeleteModal/ItemDeleteModal";
+import "./Inventory.css";
 
 export const Inventory = () => {
 	const dispatch = useDispatch();
@@ -22,9 +23,21 @@ export const Inventory = () => {
 	}
 	return (
 		<div>
-			{showItemEditModal && <ItemEditModal />}
-			{showItemDeleteModal && <ItemDeleteModal />}
+			{showItemEditModal && (
+				<div className="Modal-component">
+					<ItemEditModal />
+				</div>
+			)}
+			{showItemDeleteModal && (
+				<div className="Modal-component">
+					<ItemDeleteModal />
+				</div>
+			)}
 			<div
+				className={`inventory-page ${
+					(showItemEditModal || showItemDeleteModal) &&
+					"background-dark-and-blur"
+				}`}
 				onClick={() => {
 					showItemEditModal &&
 						dispatch({ type: "setShowItemEditModal", payload: false });

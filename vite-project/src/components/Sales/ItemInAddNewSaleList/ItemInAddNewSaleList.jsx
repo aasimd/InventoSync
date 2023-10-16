@@ -5,7 +5,7 @@ import { ItemInAddNewSaleCard } from "../ItemInAddNewSaleCard/ItemInAddNewSaleCa
 import { useDispatch, useSelector } from "react-redux";
 import { fetchItems } from "../../../redux/actions";
 import { getSearchedItems } from "../../../utils/functions";
-
+import "./ItemInAddNewSaleList.css";
 export const ItemInAddNewSaleList = () => {
 	const dispatch = useDispatch();
 	const isLoading = useSelector((state) => state.isLoading);

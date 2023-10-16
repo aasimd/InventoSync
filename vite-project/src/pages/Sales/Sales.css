@@ -11,10 +11,7 @@
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
 }
-/* .sales-page-section-1 {
-	height: 100vh;
-	overflow-y: scroll;
-} */
+
 .sales-page-section-2 {
 	height: 80vh;
 	overflow: hidden;
