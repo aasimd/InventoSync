@@ -18,3 +18,20 @@ export const getCategoryPic = (category) => {
 			return "https://static.thenounproject.com/attribution/4154970-600.png";
 	}
 };
+
+export const getSearchedItems = (input, items) => {
+	return input.length > 1
+		? items.filter((item) =>
+				item.name.toLowerCase().includes(input.toLowerCase())
+		  )
+		: items;
+};
+
+export const filterByDates = (startDate, endDate, sales) => {
+	return startDate.length > 0 && endDate.length > 0
+		? sales.filter((sale) => {
+				const saleDate = sale.createdAt.slice(0, 10);
+				return saleDate >= startDate && saleDate <= endDate;
+		  })
+		: sales;
+};

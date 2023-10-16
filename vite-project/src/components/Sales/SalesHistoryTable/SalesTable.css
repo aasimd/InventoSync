@@ -1,0 +1,22 @@
+/** @format */
+
+.sales-table tr:nth-child(even) {
+	background-color: #d6eeee;
+}
+
+.sales-table th {
+	background-color: aquamarine;
+	padding: 10px;
+	text-align: center;
+	/* border-radius: 5px; */
+}
+.sales-table td {
+	padding: 10px 2px;
+	min-width: 80px;
+	/* border-radius: 20px; */
+}
+.sales-table table {
+	margin: 0px auto;
+	max-width: 100%;
+}
+

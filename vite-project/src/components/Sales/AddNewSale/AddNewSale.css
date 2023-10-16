@@ -1,0 +1,21 @@
+/** @format */
+
+.item-card-in-add-new-sale {
+	border: 1px solid black;
+	width: 150px;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 1.1rem;
+}
+.item-card-in-add-new-sale:hover {
+	font-weight: 700;
+	cursor: pointer;
+	border: 3px solid;
+}
+
+.items-list-in-add-new-sale ul {
+	display: flex;
+	/* flex-direction: column; */
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}

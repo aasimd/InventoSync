@@ -23,7 +23,7 @@ export const ItemDeleteModal = () => {
 				<div>
 					<input
 						required
-						placeholder="ItemName"
+						placeholder={itemToDelete.name}
 						type="text"
 						value={itemName}
 						onChange={(event) => setItemName(event.target.value)}

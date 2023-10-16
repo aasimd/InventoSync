@@ -1,0 +1,40 @@
+/** @format */
+
+.dates-filter-section {
+	padding: 1rem;
+}
+.dates-filter-section b {
+	padding: 20px;
+}
+.dates-input-card {
+	display: flex;
+	gap: 1rem;
+	margin: 0px auto;
+	justify-content: center;
+	align-items: center;
+}
+.dates-input-card label {
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: green;
+}
+.dates-input-card input[type="date"] {
+	color: green;
+	font-weight: 600;
+	font-size: 1.1rem;
+	border: 2px solid;
+	padding: 10px;
+	border-radius: 10px;
+}
+.dates-input-card button {
+	background-color: red;
+	border: 2px solid white;
+	color: white;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	padding: 10px 20px;
+}
+.dates-input-card button:hover {
+	background-color: darkred;
+}

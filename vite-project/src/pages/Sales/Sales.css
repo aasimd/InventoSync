@@ -1,0 +1,42 @@
+/** @format */
+.sales-page {
+	background-color: #f0fdfa;
+}
+.sales-page h1{
+	/* margin: 1rem 0; */
+	padding: 2rem;
+}
+.sales-page-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+/* .sales-page-section-1 {
+	height: 100vh;
+	overflow-y: scroll;
+} */
+.sales-page-section-2 {
+	height: 80vh;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding: 20px;
+}
+.sales-page-section-2::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.sales-page-section-2::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.sales-page-section-2::-webkit-scrollbar-thumb {
+	background: #999;
+	border-radius: 20px;
+}
+
+/* Handle on hover */
+.sales-page-section-2::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

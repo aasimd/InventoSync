@@ -7,8 +7,10 @@ const initialState = {
 	showItemEditModal: false,
 	showItemDeleteModal: false,
 	deleteItemId: "",
-	newSaleId: "",
-	showAddNewSaleModal:false,
+	newSaleItem: {},
+	showAddNewSaleModal: false,
+	searchInput: "",
+	dateFilters: { startDate: "", endDate: "" },
 	isLoading: false,
 	error: null
 };
@@ -46,6 +48,22 @@ export const mainReducer = (state = initialState, action) => {
 		case "addSale":
 			const newSales = [...state.sales, payload];
 			return { ...state, sales: newSales };
+		case "setSearchInput":
+			return { ...state, searchInput: payload };
+		case "setNewSaleItem":
+			return { ...state, newSaleItem: payload };
+		case "setShowAddNewSaleModal":
+			return { ...state, showAddNewSaleModal: payload };
+		case "setStartDate":
+			return {
+				...state,
+				dateFilters: { ...state.dateFilters, startDate: payload }
+			};
+		case "setEndDate":
+			return {
+				...state,
+				dateFilters: { ...state.dateFilters, endDate: payload }
+			};
 		default:
 			return state;
 	}

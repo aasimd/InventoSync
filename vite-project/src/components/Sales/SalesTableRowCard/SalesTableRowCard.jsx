@@ -5,9 +5,7 @@ import { useSelector } from "react-redux";
 
 export const SalesTableRowCard = ({ sale, index }) => {
 	const items = useSelector((state) => state.items);
-	const { name, createdAt, amount, category } = sale;
-	const item = items.find((sale) => sale.name === name);
-	const price = item.price;
+	const { name, createdAt, amount, category, price, totalPrice } = sale;
 	return (
 		<tr>
 			<th>
@@ -17,8 +15,8 @@ export const SalesTableRowCard = ({ sale, index }) => {
 			<td>{name}</td>
 			<td>{category}</td>
 			<td>{amount}</td>
-			<td>{price}</td>
-			<td>{(amount * price).toFixed(2)}</td>
+			<td>{price.toFixed(2)}</td>
+			<td>{totalPrice.toFixed(2)}</td>
 		</tr>
 	);
 };
