@@ -6,9 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Home.css";
 import { InventoryStatsCard } from "../../components/Inventory/InventoryStatsCard/InventoryStatsCard";
 import { TotalRevenueAndItemsCard as SalesSummary } from "../../components/TotalRevenueAndItemsCard/TotalRevenueAndItemsCard";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Home = () => {
+	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const isLoading = useSelector((state) => state.isLoading);
 	useEffect(() => {
@@ -25,13 +26,16 @@ export const Home = () => {
 			<div className="stats-section">
 				<ul>
 					<li>
-						<div className="home-nav-links">
+						<div
+							onClick={() => navigate("/inventory")}
+							className="home-nav-links"
+						>
 							<NavLink to="/inventory">Check Inventory{">>"} </NavLink>
 						</div>
 						<InventoryStatsCard />
 					</li>
 					<li>
-						<div className="home-nav-links">
+						<div onClick={() => navigate("/sales")} className="home-nav-links">
 							<NavLink to="/sales">Check Sales{">>"} </NavLink>
 						</div>
 						<SalesSummary />
