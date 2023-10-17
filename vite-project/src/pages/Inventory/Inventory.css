@@ -1,0 +1,44 @@
+/** @format */
+.inventory-page {
+	background-color: #f0fdfa;
+}
+.inventory-page h1 {
+	padding: 2rem;
+}
+.inventory-page-layout {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	/* align-items: center; */
+}
+.inventory-page-section-1 {
+	min-width: 40%;
+}
+.inventory-page-section-2 {
+	max-width: 60%;
+}
+.inventory-page-section-2 {
+	height: 80vh;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding: 20px;
+}
+.inventory-page-section-2::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.inventory-page-section-2::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.inventory-page-section-2::-webkit-scrollbar-thumb {
+	background: #999;
+	border-radius: 20px;
+}
+
+/* Handle on hover */
+.inventory-page-section-2::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

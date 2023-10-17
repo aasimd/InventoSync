@@ -3,7 +3,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./NavBar.css";
 
 const activeStyles = ({ isActive }) =>
@@ -19,7 +20,13 @@ export const NavBar = () => {
 	return (
 		<div className="nav-bar">
 			<div>
-				<h2 onClick={() => navigate("/")}>InventoSync</h2>
+				<h2>
+					<span onClick={() => navigate("/")}>InventoSync</span>
+					Source Code:{" "}
+					<a target="_blank" href="https://github.com/aasimd/InventoSync">
+						<FontAwesomeIcon icon={faGithub} />
+					</a>
+				</h2>
 			</div>
 			<div>
 				<ul>

@@ -1,0 +1,49 @@
+/** @format */
+
+.edit-item-modal {
+	color: rgb(1, 88, 88);
+}
+.edit-item-modal h2 {
+	padding: 1.5rem;
+	text-align: center;
+}
+.edit-item-modal {
+	/* line-height: 40px; */
+	font-size: 1.1rem;
+	text-align: left;
+}
+.edit-item-modal input {
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	border: 2px solid teal;
+	color: teal;
+	background-color: aliceblue;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+.edit-item-modal .modal-buttons {
+	display: flex;
+	justify-content: center;
+}
+.edit-item-modal .modal-buttons input[type="submit"] {
+	background-color: teal;
+}
+.edit-item-modal .modal-buttons input[type="submit"],
+.edit-item-modal .modal-buttons button {
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 5px 15px;
+	border: none;
+	border-radius: 10px;
+}
+.edit-item-modal .modal-buttons input[type="submit"]:hover {
+	background-color: rgb(13, 199, 199);
+}
+.edit-item-modal .modal-buttons button {
+	background-color: darkred;
+}
+.edit-item-modal .modal-buttons button:hover {
+	background-color: red;
+}

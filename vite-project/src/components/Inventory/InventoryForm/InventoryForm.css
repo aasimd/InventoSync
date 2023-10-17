@@ -1,0 +1,43 @@
+/** @format */
+
+.add-new-item-form {
+	color: teal;
+	background-color: white;
+	border: 2px solid teal;
+	border-radius: 10px;
+	padding: 1rem;
+	width: 25vw;
+	margin: auto;
+}.add-new-item-form h2{
+    margin-bottom: 20px;
+}
+.add-new-item-form form {
+	text-align: left;
+}
+.add-new-item-form label {
+	font-size: 1.1rem;
+}
+.add-new-item-form input {
+	font-size: 1.1rem;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: teal;
+	margin: 10px;
+}
+.add-new-item-form input:focus{
+    border: 3px solid  rgb(13, 199, 199)
+}
+.add-new-item-form form div:nth-of-type(5) {
+	text-align: center;
+}
+.add-new-item-form form input[type="submit"] {
+	background-color: teal;
+	color: white;
+	font-weight: 600;
+	font-size: 1.1rem;
+	border: none;
+	padding: 5px 15px;
+}
+.add-new-item-form form input[type="submit"]:hover {
+	background-color: rgb(13, 199, 199);
+}

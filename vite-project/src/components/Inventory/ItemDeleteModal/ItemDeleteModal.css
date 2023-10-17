@@ -1,0 +1,55 @@
+/** @format */
+
+.item-delete-modal {
+	color: rgb(202, 28, 28);
+	font-size: 1.1rem;
+}
+.item-delete-modal h2 {
+	padding: 1.5rem;
+}
+.item-delete-modal input[type="text"] {
+	background-color: aliceblue;
+	border: 2px solid teal;
+	color: darkred;
+	font-size: 1.1rem;
+	padding: 5px 15px;
+	border-radius: 10px;
+	margin: 5px auto;
+}
+.item-delete-modal input[type="text"]::placeholder {
+	color: rgb(171, 154, 154);
+}
+
+.item-delete-modal .modal-buttons {
+	display: flex;
+	justify-content: center;
+}
+.item-delete-modal .modal-buttons input[type="submit"] {
+	background-color: darkred;
+}
+.item-delete-modal .modal-buttons input[type="submit"] {
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 5px 15px;
+	border: none;
+	border-radius: 10px;
+}
+.item-delete-modal .modal-buttons button {
+	color: darkred;
+	background-color: white;
+	font-weight: 500;
+	padding: 5px 15px;
+	border-radius: 10px;
+	font-size: 1rem;
+}
+.item-delete-modal .modal-buttons input[type="submit"]:hover {
+	background-color: red;
+}
+/* .item-delete-modal  .modal-buttons button {
+	background-color: darkred;
+} */
+.item-delete-modal .modal-buttons button:hover {
+	color: red;
+	border: 2px solid red;
+}

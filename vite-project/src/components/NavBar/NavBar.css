@@ -17,6 +17,20 @@
 .nav-bar h2 {
 	cursor: pointer;
 }
-.nav-bar h2:hover {
+.nav-bar h2 span:hover {
 	text-decoration: underline;
+}
+.nav-bar h2 span {
+	margin-right: 4rem;
+	font-size: 2rem;
+}
+.nav-bar h2 a {
+	color: black;
+	font-size: 2rem;
+}
+.nav-bar h2 a :hover {
+	color: red;
+}
+.nav-bar h2 {
+	font-size: 1rem;
 }

@@ -8,6 +8,7 @@ import { InventoryForm } from "../../components/Inventory/InventoryForm/Inventor
 import { ItemEditModal } from "../../components/Inventory/ItemEditModal/ItemEditModal";
 import { ItemDeleteModal } from "../../components/Inventory/ItemDeleteModal/ItemDeleteModal";
 import "./Inventory.css";
+import { InventoryStatsCard } from "../../components/Inventory/InventoryStatsCard/InventoryStatsCard";
 
 export const Inventory = () => {
 	const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export const Inventory = () => {
 		return <h1>Loading...</h1>;
 	}
 	return (
-		<div>
+		<div className="inventory-page">
 			{showItemEditModal && (
 				<div className="Modal-component">
 					<ItemEditModal />
@@ -46,8 +47,19 @@ export const Inventory = () => {
 				}}
 			>
 				<h1>Inventory</h1>
-				<InventoryForm />
-				<ItemsList />
+				<div className="inventory-page-layout">
+					<div className="inventory-page-section-1">
+						<div>
+							<InventoryStatsCard />
+						</div>
+						<div>
+							<InventoryForm />
+						</div>
+					</div>
+					<div className="inventory-page-section-2">
+						<ItemsList />
+					</div>
+				</div>
 			</div>
 		</div>
 	);

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { editItem } from "../../../redux/actions";
-
+import "./ItemEditModal.css";
 export const ItemEditModal = () => {
 	const dispatch = useDispatch();
 	const editItemId = useSelector((state) => state.editItemId);
@@ -26,10 +26,10 @@ export const ItemEditModal = () => {
 			price: Number(item.price)
 		};
 		dispatch(editItem(item._id, updatedItem));
-        dispatch({ type: "setShowItemEditModal", payload: false })
+		dispatch({ type: "setShowItemEditModal", payload: false });
 	};
 	return (
-		<div>
+		<div className="edit-item-modal">
 			<h2>Edit Item</h2>
 			<div>
 				<form onSubmit={(event) => submitHandler(event)}>
@@ -81,15 +81,19 @@ export const ItemEditModal = () => {
 							/>
 						</label>
 					</div>
-					<div>
-						<input type="submit" value="Save" />
-						<button
-							onClick={() =>
-								dispatch({ type: "setShowItemEditModal", payload: false })
-							}
-						>
-							Discard
-						</button>
+					<div className="modal-buttons">
+						<div>
+							<input type="submit" value="Save" />
+						</div>
+						<div>
+							<button
+								onClick={() =>
+									dispatch({ type: "setShowItemEditModal", payload: false })
+								}
+							>
+								Discard
+							</button>
+						</div>
 					</div>
 				</form>
 			</div>

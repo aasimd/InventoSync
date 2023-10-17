@@ -16,7 +16,7 @@ export const TotalRevenueAndItemsCard = () => {
 		0
 	);
 	return (
-		<div className="total-revenue-and-items-card">
+		<div className="stats-card">
 			<h2>Sales Summary</h2>
 			<ul>
 				<li>

@@ -22,9 +22,11 @@ export const ItemInAddNewSaleList = () => {
 		<div>
 			{filteredArray.length > 0 ? (
 				<ul>
-					{filteredArray.map((item) => (
-						<ItemInAddNewSaleCard key={item._id} item={item} />
-					))}
+					{filteredArray
+						.filter((item) => item.quantity > 0)
+						.map((item) => (
+							<ItemInAddNewSaleCard key={item._id} item={item} />
+						))}
 				</ul>
 			) : (
 				<h2>No Data Found</h2>

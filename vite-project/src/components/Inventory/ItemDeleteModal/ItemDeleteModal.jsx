@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItem } from "../../../redux/actions";
-
+import "./ItemDeleteModal.css";
 export const ItemDeleteModal = () => {
 	const dispatch = useDispatch();
 	const deleteItemId = useSelector((state) => state.deleteItemId);
@@ -16,7 +16,8 @@ export const ItemDeleteModal = () => {
 		dispatch({ type: "setShowItemDeleteModal", payload: false });
 	};
 	return (
-		<div>
+		<div className="item-delete-modal">
+			<h2>Delete Item?</h2>
 			<b>Are you sure you want to delete this item from your Inventory?</b>
 			<p>To Delete the Item Enter Item name (i.e. {itemToDelete.name})</p>
 			<form onSubmit={(event) => submitHandler(event)}>
@@ -29,21 +30,25 @@ export const ItemDeleteModal = () => {
 						onChange={(event) => setItemName(event.target.value)}
 					/>
 				</div>
-				<div>
-					<input
-						disabled={itemName === itemToDelete.name ? false : true}
-						type="submit"
-						value="Delete"
-						title="Delete Item"
-					/>
-					<button
-						title="Cancel"
-						onClick={() =>
-							dispatch({ type: "setShowItemDeleteModal", payload: false })
-						}
-					>
-						Cancel
-					</button>
+				<div className="modal-buttons">
+					<div>
+						<input
+							disabled={itemName === itemToDelete.name ? false : true}
+							type="submit"
+							value="Delete"
+							title="Delete Item"
+						/>
+					</div>
+					<div>
+						<button
+							title="Cancel"
+							onClick={() =>
+								dispatch({ type: "setShowItemDeleteModal", payload: false })
+							}
+						>
+							Cancel
+						</button>
+					</div>
 				</div>
 			</form>
 		</div>
