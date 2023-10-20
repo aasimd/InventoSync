@@ -1,0 +1,23 @@
+{
+	"routes": [
+		{
+			"src": "/",
+			"dest": "/",
+			"errorElement": "/",
+			"children": [
+				{
+					"src": "/",
+					"dest": "/"
+				},
+				{
+					"src": "/inventory",
+					"dest": "/"
+				},
+				{
+					"src": "/sales",
+					"dest": "/"
+				}
+			]
+		}
+	]
+}
